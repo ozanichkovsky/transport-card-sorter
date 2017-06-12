@@ -1,0 +1,20 @@
+{
+  "name": "ozanichkovsky/transport-card-sorter",
+  "type": "library",
+  "description": "Transport card sorter",
+  "keywords": ["php"],
+  "homepage": "https://github.com/ozanichkovsky/transport-card-sorter",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.1",
+    "squizlabs/php_codesniffer": "~2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "OleZan\\TransportCard\\": "src/"
+    }
+  }
+}
