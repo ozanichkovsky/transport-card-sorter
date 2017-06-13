@@ -8,7 +8,9 @@
 
 namespace OleZan\BoardingCard\Card;
 
-
+/**
+ * Basic card implementation
+ */
 class BasicCard implements CardInterface
 {
     /**
@@ -21,17 +23,33 @@ class BasicCard implements CardInterface
      */
     private $destination;
 
+    /**
+     * BasicCard constructor.
+     *
+     * @param string $source
+     * @param string $destination
+     */
     public function __construct(string $source, string $destination)
     {
         $this->source = $source;
         $this->destination = $destination;
     }
 
+    /**
+     * Get source
+     *
+     * @return string
+     */
     public function getSource(): string
     {
         return $this->source;
     }
 
+    /**
+     * Get destination
+     *
+     * @return string
+     */
     public function getDestination(): string
     {
         return $this->destination;

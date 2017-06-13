@@ -1,26 +1,47 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: oleksandr
- * Date: 6/13/2017
- * Time: 3:10 AM
- */
 
 namespace OleZan\BoardingCard\Card;
 
-
+/**
+ * Flight boarding cart
+ */
 class Flight implements CardInterface, StringInterface
 {
+    /**
+     * @var BasicCard
+     */
     private $basicCard;
 
+    /**
+     * @var string
+     */
     private $flight;
 
+    /**
+     * @var string
+     */
     private $gate;
 
+    /**
+     * @var string
+     */
     private $seat;
 
+    /**
+     * @var string
+     */
     private $baggageDrop;
 
+    /**
+     * Flight constructor.
+     *
+     * @param string $source
+     * @param string $destination
+     * @param string $flight
+     * @param string $gate
+     * @param string $seat
+     * @param string|null $baggageDrop
+     */
     public function __construct(
         string $source,
         string $destination,
@@ -37,16 +58,31 @@ class Flight implements CardInterface, StringInterface
         $this->baggageDrop = $baggageDrop;
     }
 
+    /**
+     * Get source
+     *
+     * @return string
+     */
     public function getSource(): string
     {
         return $this->basicCard->getSource();
     }
 
+    /**
+     * Get destination
+     *
+     * @return string
+     */
     public function getDestination(): string
     {
         return $this->basicCard->getDestination();
     }
 
+    /**
+     * String representation
+     *
+     * @return string
+     */
     public function __toString(): string
     {
         $baggageDrop = PHP_EOL . (
